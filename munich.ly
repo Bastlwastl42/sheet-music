@@ -77,8 +77,8 @@ strophe_drei = \markup {
 \bookpart {
 
 \paper {
-    #(set-paper-size "a3" 'landscape)
-    #(layout-set-staff-size 24)    % default is 20, increase to scale up
+    %#(set-paper-size "a3" 'landscape)
+    #(layout-set-staff-size 18.5)    % default is 20, increase to scale up
   }
 % ╔══════════════════════════════════════════╗
 %  HEADER
