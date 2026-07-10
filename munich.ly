@@ -79,6 +79,16 @@ strophe_drei = \markup {
 \paper {
     #(set-paper-size "a4")
     #(layout-set-staff-size 18)    % default is 20, increase to scale up
+    % ── Fill vertical space ───────────────────
+  ragged-bottom      = ##f
+  ragged-last-bottom = ##f
+
+  % ── Margins ───────────────────────────────
+  top-margin    = 15\mm
+  bottom-margin = 15\mm
+  left-margin   = 20\mm
+  right-margin  = 20\mm
+
   }
 % ╔══════════════════════════════════════════╗
 %  HEADER
