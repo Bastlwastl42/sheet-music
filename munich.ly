@@ -77,8 +77,7 @@ strophe_drei = \markup {
 \bookpart {
 
 \paper {
-    #(set-paper-size "a4")
-    #(layout-set-staff-size 16)    % default is 20, increase to scale up
+    #(layout-set-staff-size 18)    % default is 20, increase to scale up
     % ── Fill vertical space ───────────────────
   ragged-bottom      = ##f
   ragged-last-bottom = ##f
