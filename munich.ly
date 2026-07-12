@@ -5,7 +5,7 @@
 % ╚══════════════════════════════════════════╝
 
 melody = \relative c' {
-  c'4  d  c | a2  f4 | e2  c'4 | bes2. | e,2 c'4 | bes2 e4 | f2 d4| c2. |
+  c'4  d  c | a2  f4 | e2  c'4 | bes2. | e,2 c'4 | bes2 e,4 | f2 d'4| c2. |
   c4  d  c | a2  f4 | e2  c'4 | a2. | g4. a8 g4 | f e d | 
 }
 
@@ -19,7 +19,7 @@ refrain_melodie = \relative c' {
   e4 r4 e4 | a4 r4 a4 | bes 4 r4 bes4 | g2. | c2. | c2. | a4 f2 ~f4 r4 c4 |
   f4 r4 f4 | a4 r4 a4 | c4 r4 c4 | a2. | c2. | c2. | bes4 g2 ~g4 r4 g4 |
   bes2 d4 | f4 e4 d4 | c2 a4| f2 d'4 | c2 bes4 | e,2 d'4 | c2 a4 | f2 f4 | 
-  bes2 d4 | f e d | c2 a4 | f4 r4 f'4 | e4. d8 c4 | bes4 ( a4 ) g4 | g4 r4 r4 | r2.
+  bes2 d4 | f e d | c2 a4 | f4 r4 f'4 | e4. d8 c4 | bes4 ( a4 ) g4 | f4 r2 | r2.
 }
 
 refrain_bass = \relative c {
@@ -38,13 +38,13 @@ verse_one = \lyricmode {
 
 verse_two = \lyricmode {
   Was -- ser ist bil -- lig, rein und gut, nur ver -- dünnt es un -- ser Blut. 
-  schö -- ner sind Trop -- fen gold -- 'nen Weins. a --ber am schön --sten ist eins:  - 
+  schö -- ner sind Trop -- fen gold -- 'nen Weins. a -- ber am schön -- sten ist eins:  - 
   \set stanza = "Ref."
   In
   Mün -- chen steht ein Hof -- bräu -- haus, eins zwei g'suf -- fa
   Da läuft so man -- ches Fäß -- chen aus, eins, zwei, g'suf -- fa
   Da hat schon man -- cher bra -- ve Mann, eins, zwei, g'suf -- fa
-  ge --zeigt was er so ver -- tra -- gen kann. Schon früh am Mor -- gen fing er an, 
+  ge -- zeigt was er so ver -- tra -- gen kann. Schon früh am Mor -- gen fing er an, 
   und spät am A -- bend kam er her -- aus! So schön ists im Hof -- bräu -- haus. 
 }
 
@@ -77,17 +77,8 @@ strophe_drei = \markup {
 \bookpart {
 
 \paper {
-    #(layout-set-staff-size 18)    % default is 20, increase to scale up
-    % ── Fill vertical space ───────────────────
-  ragged-bottom      = ##f
-  ragged-last-bottom = ##f
-
-  % ── Margins ───────────────────────────────
-  top-margin    = 15\mm
-  bottom-margin = 15\mm
-  left-margin   = 20\mm
-  right-margin  = 20\mm
-
+  #(set-paper-size "a3landscape")
+    #(layout-set-staff-size 24)    % default is 20, increase to scale up
   }
 % ╔══════════════════════════════════════════╗
 %  HEADER
@@ -98,7 +89,7 @@ strophe_drei = \markup {
   composer = "Musik: Wiga Gabriel"
   poet     = "Text: Klaus S. Richter u. F. Reiter"
   tagline  = \markup { \italic "Engraved with LilyPond. Persönliche Übungskopie. Bitte nicht verklagen." }
-  copyright = "Copyright by Wilhelm Gebauer, Leipzig  Eigentum und Verlag Wilhelm Gebauer, Musikverlag, Wiesbaden"
+  copyright = \markup {\column {"Copyright by Wilhelm Gebauer, Leipzig" "Eigentum und Verlag Wilhelm Gebauer, Musikverlag, Wiesbaden"}}
 }
 
 % ╔══════════════════════════════════════════╗
@@ -155,8 +146,9 @@ strophe_drei = \markup {
     }
 
   >>
-
-  \layout { }
+  \layout {
+  
+  }
   \midi   { \tempo 4 = 180 }
 
 }
@@ -169,7 +161,8 @@ strophe_drei = \markup {
 \bookpart {
   \paper {
     #(set-paper-size "a4")
-    #(layout-set-staff-size 20)    % default is 20, increase to scale up
+    #(layout-set-staff-size 21)    % default is 20, increase to scale up
+    %#(text-font-size 16)
   }
 
   \header {
@@ -210,7 +203,6 @@ strophe_drei = \markup {
 
     >> 
     \layout {
-      #(layout-set-staff-size 20)   % standard for A4
     }
   }
 
